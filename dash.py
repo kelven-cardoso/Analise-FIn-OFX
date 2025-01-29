@@ -11,7 +11,6 @@ df["Mês"] = df["Data"].apply(lambda x: "-".join(x.split("-")[:-1]))
 df["Data"] = pd.to_datetime(df["Data"])
 df["Data"] = df["Data"].apply(lambda x: x.date())
 df = df[df["Categoria"]!="Receitas"]
-df["Valor"] = 1
 
 def filter_data(df, mes, selected_categories):
     df_filtered = df[df['Mês'] == mes]
